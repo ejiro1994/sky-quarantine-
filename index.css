@@ -1,0 +1,183 @@
+@font-face {
+  font-family: 'ejiro-font-bold';
+  src: url("font/Almarena-Bold.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0b1a23;
+  font-family: futura-pt, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+  margin-left: 86px;
+  margin-top: 50px;
+}
+
+nav {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+nav span {
+  font-family: 'ejiro-font-bold', Fallback, sans-serif;
+  color: #fff;
+  font-size: 48px;
+  mix-blend-mode: exclusion;
+}
+
+nav .sky-logo {
+  width: 72px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  mix-blend-mode: screen;
+  mix-blend-mode: exclusion;
+  margin-right: 17px;
+}
+
+.list1-title {
+  margin-top: 153px;
+  margin-bottom: 33px;
+  color: #fff;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 27px;
+}
+
+.page-bg {
+  z-index: -1;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url("images/percy-light2.webp") no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(50px) brightness(0.6) contrast(1.2) drop-shadow(1px 1px 900px black);
+          filter: blur(50px) brightness(0.6) contrast(1.2) drop-shadow(1px 1px 900px black);
+  mix-blend-mode: overlay;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.card-bg, .movie-card-container.one::after, .movie-card-container.one::before, .movie-card-container.two::after, .movie-card-container.two::before, .movie-card-container.three::after, .movie-card-container.three::before, .movie-card-container.four::after, .movie-card-container.four::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-position: bottom !important;
+  background-size: 200% !important;
+  -webkit-transition: all 2.5s ease-out;
+  transition: all 2.5s ease-out;
+  -webkit-filter: blur(39px) brightness(1) contrast(110%);
+          filter: blur(39px) brightness(1) contrast(110%);
+  width: 429px;
+  height: 187px;
+  z-index: -1;
+  background-clip: border-box;
+  -webkit-clip-path: inset(0 round 25px);
+          clip-path: inset(0 round 25px);
+  mix-blend-mode: screen;
+}
+
+.card-bg:hover, .movie-card-container.one:hover::after, .movie-card-container.one:hover::before, .movie-card-container.two:hover::after, .movie-card-container.two:hover::before, .movie-card-container.three:hover::after, .movie-card-container.three:hover::before, .movie-card-container.four:hover::after, .movie-card-container.four:hover::before {
+  background-size: 100% !important;
+  background-position: center !important;
+}
+
+.card-bg2, .movie-card-container.one::before, .movie-card-container.two::before, .movie-card-container.three::before, .movie-card-container.four::before {
+  background: black;
+  -webkit-filter: blur(0) !important;
+          filter: blur(0) !important;
+  mix-blend-mode: hard-light;
+}
+
+.movielist-wrapper {
+  overflow: hidden;
+  display: block;
+}
+
+.movie-card-container {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 399px;
+  height: 231px;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: #fff;
+  margin-right: 60px;
+  margin-bottom: 30px;
+}
+
+.movie-card-container.one::after {
+  background: url("images/mulan.jpg");
+}
+
+.movie-card-container.two::after {
+  background: url("images/2067.jpg");
+}
+
+.movie-card-container.three::after {
+  background: url("images/the-way-back.jpg");
+}
+
+.movie-card-container.four::after {
+  background: url("images/demon-slayer.jpg");
+}
+
+.movie-card-container .movie-img {
+  height: 215px;
+  border-radius: 13px;
+  -webkit-box-shadow: 5px 5px 25px #000000ba;
+          box-shadow: 5px 5px 25px #000000ba;
+}
+
+.movie-card-container .info-section {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 60px;
+  margin-left: 16px;
+}
+
+.movie-card-container .info-section .movie-title {
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+
+.movie-card-container .info-section .movie-description {
+  margin-bottom: 9px;
+  overflow: hidden;
+  height: 70px;
+}
+
+.movie-card-container .info-section .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.movie-card-container .info-section .buttons button {
+  all: unset;
+  text-transform: capitalize;
+}
+/*# sourceMappingURL=index.css.map */

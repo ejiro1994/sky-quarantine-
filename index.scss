@@ -1,0 +1,274 @@
+$url: url(img/shark.jpg);
+$b: 1.5em; // border-width
+$blur: blur(9px);
+$rect: inset(0 round 25px);
+
+@font-face {
+    font-family: 'ejiro-font-bold';
+    src:
+        url('font/Almarena-Bold.woff') format('woff');
+    //     font-family: 'ejiro-font-med';
+    //     src:
+    //         url('font/Almarena-Regular.woff') format('woff');
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+
+    body {
+        // background: red !important;
+        background: #0b1a23;
+        // background: #fff;
+        // background: url('images/movie-img.png') no-repeat;
+        // background-size: cover;
+        // filter: blur(5);
+        font-family: futura-pt, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        overflow-x: hidden;
+    }
+
+    .page-wrapper {
+        margin-left: 86px;
+        margin-top: 50px;
+    }
+
+    nav {
+        display: inline-flex;
+
+        span {
+            font-family: 'ejiro-font-bold', Fallback, sans-serif;
+            color: #fff;
+            font-size: 48px;
+            mix-blend-mode: exclusion;
+
+
+        }
+
+        .sky-logo {
+            width: 72px;
+            // height: 46px;
+            object-fit: contain;
+
+            mix-blend-mode: screen;
+            mix-blend-mode: exclusion;
+            margin-right: 17px;
+        }
+    }
+
+    .list1-title {
+        margin-top: 153px;
+        margin-bottom: 33px;
+        // text-transform: capitalize;
+        color: #fff;
+        font-family: futura-pt, sans-serif;
+        font-weight: 500;
+        font-size: 27px;
+
+
+    }
+
+    .page-bg {
+        z-index: -1;
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        background: url('images/percy-light2.webp') no-repeat;
+        background-size: cover;
+        filter: blur(50px) brightness(.6) contrast(1.2) drop-shadow(1px 1px 900px rgb(0, 0, 0)) //  invert(1)
+        ;
+        mix-blend-mode: overlay;
+        transform: scale(1.1);
+
+    }
+
+    .card-bg {
+        content: '';
+        // display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        background-position: bottom !important;
+        background-size: 200% !important;
+        transition: all 2.5s ease-out;
+
+        &:hover {
+            background-size: 100% !important;
+            background-position: center !important;
+        }
+
+
+
+        // background: url('images/hard-kill.jpg') top;
+        filter: blur(39px) brightness(1) contrast(110%) // drop-shadow(16px 16px 20px rgb(64, 64, 64)) 
+        ;
+        ;
+        ;
+
+        // transform: scale(1.1);
+
+        width: 429px;
+        height: 187px;
+        // border-radius: 25px;
+        z-index: -1;
+
+        background-clip: border-box;
+        clip-path: $rect;
+        mix-blend-mode: screen;
+
+    }
+
+    .card-bg2 {
+        background: rgb(0, 0, 0);
+        filter: blur(0) !important;
+        mix-blend-mode: hard-light;
+
+    }
+
+
+
+    .movielist-wrapper {
+        // width: 100vw;
+        // height: 100vh;
+        // position: absolute;
+
+        // display: flex;
+        // display: ;
+        // flex-wrap: wrap;
+        // gap: 60px;
+        overflow: hidden;
+        display: block;
+
+
+    }
+
+    .movie-card-container {
+        // width: 429px;
+        display: inline-flex;
+        width: 399px;
+        // background: rgba(255, 0, 0, 0.504);
+        height: 231px;
+        position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        color: #fff;
+        margin-right: 60px;
+        margin-bottom: 30px;
+
+        &.one {
+
+            &::after {
+
+                @extend .card-bg;
+                background: url('images/mulan.jpg');
+
+            }
+
+            &::before {
+                @extend .card-bg;
+                @extend .card-bg2;
+            }
+
+        }
+
+        &.two {
+
+            &::after {
+
+                @extend .card-bg;
+                background: url('images/2067.jpg');
+
+            }
+
+            &::before {
+                @extend .card-bg;
+                @extend .card-bg2;
+            }
+
+        }
+
+        &.three {
+
+            &::after {
+
+                @extend .card-bg;
+                background: url('images/the-way-back.jpg');
+
+            }
+
+            &::before {
+                @extend .card-bg;
+                @extend .card-bg2;
+            }
+
+        }
+        &.four {
+
+            &::after {
+
+                @extend .card-bg;
+                background: url('images/demon-slayer.jpg');
+
+            }
+
+            &::before {
+                @extend .card-bg;
+                @extend .card-bg2;
+            }
+
+        }
+
+
+
+
+
+        .movie-img {
+            height: 215px;
+            // position: absolute;
+            border-radius: 13px;
+            box-shadow: 5px 5px 25px #000000ba;
+
+        }
+
+
+        .info-section {
+            user-select: none;
+            overflow: hidden;
+
+            cursor: pointer;
+
+            .movie-title {
+                text-transform: capitalize;
+                margin-bottom: 20px;
+            }
+
+            display: inline-block;
+            margin-top : 60px;
+            margin-left: 16px;
+
+            .movie-description {
+                margin-bottom: 9px;
+                overflow: hidden;
+                height: 70px;
+            }
+
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                button {
+                    all: unset;
+                    text-transform: capitalize;
+                }
+
+            }
+        }
+    }
